@@ -52,7 +52,7 @@ class MDSProviderApi():
         r = requests.get(MDS_SCHEMA_PATH + "trips.json")
         schema = r.json()
         v = Draft4Validator(schema)
-        r  = requests.get(self._get_mds_url() + self.post_fix + '/trips', headers = self._compose_header())  
+        r  = requests.get(self._get_mds_url() + self.post_fix + '/trips2', headers = self._compose_header())  
         json = r.json()
         try: 
             jsonschema.validate(json,schema)
